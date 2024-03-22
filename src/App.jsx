@@ -10,7 +10,7 @@ function App() {
         <Sidebar />
         <div className="w-full h-screen ">
           <Nav />
-          <div className=" p-4">
+          <div>
             <Recommended />
             <Products />
           </div>

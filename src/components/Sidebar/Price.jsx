@@ -1,9 +1,9 @@
 import RadioInput from "../RadioInput";
 
-function Price({ setPrice }) {
+function Price({ setPrice, price }) {
   function handlePrice(e) {
-    console.log(e.target.id);
     setPrice(e.target.id);
+    console.log(e.target.id);
   }
   return (
     <div>
@@ -11,30 +11,34 @@ function Price({ setPrice }) {
       <RadioInput
         text={"Todos"}
         name={"price"}
-        id={"todos"}
+        id={"Todos"}
         setPrice={setPrice}
         handleClick={handlePrice}
+        selected={price}
       />
       <RadioInput
         text={"$0-50"}
         name={"price"}
-        id={"0-50"}
+        id={"$0-50"}
         setPrice={setPrice}
         handleClick={handlePrice}
+        selected={price}
       />
       <RadioInput
         text={"$100-150"}
         name={"price"}
-        id={"100-150"}
+        id={"$100-150"}
         setPrice={setPrice}
         handleClick={handlePrice}
+        selected={price}
       />
       <RadioInput
         text={"Mais de $150"}
         name={"price"}
-        id={"150"}
+        id={"Mais de $150"}
         setPrice={setPrice}
         handleClick={handlePrice}
+        selected={price}
       />
     </div>
   );

@@ -10,18 +10,18 @@ const data = [
     newPrice: "200",
     company: "Nike",
     color: "white",
-    category: "sneakers",
+    category: "Tênis",
   },
   {
     img: "https://m.media-amazon.com/images/I/519MRhRKGFL._AC_UX575_.jpg",
-    title: "Nike Air Vapormax Plus",
+    title: "Nike Air Vapormax ",
     // star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
     company: "Nike",
     color: "red",
-    category: "sneakers",
+    category: "Tênis",
   },
 
   {
@@ -33,7 +33,7 @@ const data = [
     newPrice: "200",
     company: "Nike",
     color: "green",
-    category: "sneakers",
+    category: "Tênis",
   },
   {
     img: "https://m.media-amazon.com/images/I/71oEKkghg-L._AC_UX575_.jpg",
@@ -44,7 +44,7 @@ const data = [
     newPrice: "200",
     company: "Adidas",
     color: "black",
-    category: "sneakers",
+    category: "Tênis",
   },
   {
     img: "https://m.media-amazon.com/images/I/41M54ztS6IL._AC_SY625._SX._UX._SY._UY_.jpg",
@@ -55,7 +55,7 @@ const data = [
     newPrice: "200",
     company: "Vans",
     color: "green",
-    category: "flats",
+    category: "Sapatilhas",
   },
   {
     img: "https://m.media-amazon.com/images/I/71zKuNICJAL._AC_UX625_.jpg",
@@ -66,19 +66,19 @@ const data = [
     newPrice: "50",
     company: "Adidas",
     color: "black",
-    category: "flats",
+    category: "Sapatilhas",
   },
 
   {
     img: "https://m.media-amazon.com/images/I/61V9APfz97L._AC_UY695_.jpg",
-    title: "Loafer Flats",
+    title: "Loafer Sapatilhas",
     // star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "50",
     company: "Vans",
     color: "white",
-    category: "flats",
+    category: "Sapatilhas",
   },
 
   {
@@ -90,7 +90,7 @@ const data = [
     newPrice: "200",
     company: "Nike",
     color: "green",
-    category: "sneakers",
+    category: "Tênis",
   },
 
   {
@@ -102,7 +102,7 @@ const data = [
     newPrice: "200",
     company: "Adidas",
     color: "blue",
-    category: "sneakers",
+    category: "Tênis",
   },
 
   {
@@ -114,7 +114,7 @@ const data = [
     newPrice: "150",
     company: "Puma",
     color: "green",
-    category: "sneakers",
+    category: "Tênis",
   },
   {
     img: "https://m.media-amazon.com/images/I/71E75yRwCDL._AC_UY575_.jpg",
@@ -125,7 +125,7 @@ const data = [
     newPrice: "150",
     company: "Puma",
     color: "red",
-    category: "sneakers",
+    category: "Tênis",
   },
   {
     img: "https://m.media-amazon.com/images/I/71jeoX0rMBL._AC_UX575_.jpg",
@@ -136,7 +136,7 @@ const data = [
     newPrice: "150",
     company: "Puma",
     color: "black",
-    category: "sneakers",
+    category: "Tênis",
   },
   {
     img: "https://m.media-amazon.com/images/I/61TM6Q9dvxL._AC_UX575_.jpg",
@@ -147,7 +147,7 @@ const data = [
     newPrice: "150",
     company: "Puma",
     color: "white",
-    category: "sneakers",
+    category: "Tênis",
   },
   {
     img: "https://m.media-amazon.com/images/I/7128-af7joL._AC_UY575_.jpg",
@@ -158,7 +158,7 @@ const data = [
     newPrice: "150",
     company: "Puma",
     color: "black",
-    category: "sneakers",
+    category: "Tênis",
   },
 
   {
@@ -170,7 +170,7 @@ const data = [
     newPrice: "100",
     company: "Puma",
     color: "green",
-    category: "sneakers",
+    category: "Tênis",
   },
   {
     img: "https://m.media-amazon.com/images/I/719gdz8lsTS._AC_UX575_.jpg",
@@ -181,7 +181,7 @@ const data = [
     newPrice: "100",
     company: "Vans",
     color: "red",
-    category: "flats",
+    category: "Sapatilhas",
   },
   {
     img: "https://m.media-amazon.com/images/I/71gpFHJlnoL._AC_UX575_.jpg",
@@ -192,7 +192,7 @@ const data = [
     newPrice: "100",
     company: "Vans",
     color: "white",
-    category: "sandals",
+    category: "Sandálias",
   },
   {
     img: "https://m.media-amazon.com/images/I/71pf7VFs9CL._AC_UX575_.jpg",
@@ -203,29 +203,29 @@ const data = [
     newPrice: "100",
     company: "Vans",
     color: "blue",
-    category: "sandals",
+    category: "Sandálias",
   },
   {
     img: "https://m.media-amazon.com/images/I/61N4GyWcHPL._AC_UY575_.jpg",
-    title: "Classic Bandana Sneakers",
+    title: "Classic Bandana Tênis",
     // star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "50",
     company: "Nike",
     color: "black",
-    category: "sandals",
+    category: "Sandálias",
   },
   {
     img: "https://m.media-amazon.com/images/I/61bncQ44yML._AC_UX695_.jpg",
-    title: "Chunky High Heel",
+    title: "Chunky High ",
     // star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "50",
     company: "Vans",
     color: "black",
-    category: "heels",
+    category: "Salto",
   },
   {
     img: "https://m.media-amazon.com/images/I/71czu7WgGuL._AC_UY695_.jpg",
@@ -236,7 +236,7 @@ const data = [
     newPrice: "100",
     company: "puma",
     color: "black",
-    category: "heels",
+    category: "Salto",
   },
   {
     img: "https://m.media-amazon.com/images/I/61men05KRxL._AC_UY625_.jpg",
@@ -247,7 +247,7 @@ const data = [
     newPrice: "150",
     company: "Nike",
     color: "red",
-    category: "heels",
+    category: "Salto",
   },
   {
     img: "https://m.media-amazon.com/images/I/519MRhRKGFL._AC_UX575_.jpg",
@@ -258,19 +258,19 @@ const data = [
     newPrice: "200",
     company: "Nike",
     color: "red",
-    category: "sneakers",
+    category: "Tênis",
   },
 
   {
     img: "https://m.media-amazon.com/images/I/51PGWTXgf-L._AC_UY625_.jpg",
-    title: "Low Mid Block Heels",
+    title: "Low Mid Block Salto",
     // star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
     company: "Nike",
     color: "black",
-    category: "heels",
+    category: "Salto",
   },
   {
     img: "https://m.media-amazon.com/images/I/616sA5XUKtL._AC_UY675_.jpg",
@@ -281,7 +281,7 @@ const data = [
     newPrice: "50",
     company: "Adidas",
     color: "black",
-    category: "heels",
+    category: "Salto",
   },
   {
     img: "https://m.media-amazon.com/images/I/71h5+MbEK7L._AC_UY625_.jpg",
@@ -292,18 +292,18 @@ const data = [
     newPrice: "150",
     company: "Adidas",
     color: "white",
-    category: "heels",
+    category: "Salto",
   },
   {
     img: "https://m.media-amazon.com/images/I/61uw5RDxKQL._AC_UY625_.jpg",
-    title: "Bridal Sandals Glitter",
+    title: "Bridal Sandálias Glitter",
     // star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "50",
     company: "Adidas",
     color: "black",
-    category: "heels",
+    category: "Salto",
   },
   {
     img: "https://m.media-amazon.com/images/I/71yhoZP0l6L._AC_UY695_.jpg",
@@ -314,7 +314,7 @@ const data = [
     newPrice: "50",
     company: "Adidas",
     color: "black",
-    category: "flats",
+    category: "Sapatilhas",
   },
 ];
 

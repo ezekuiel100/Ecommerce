@@ -1,8 +1,7 @@
 import RadioInput from "../RadioInput";
 
-function Category({ setCategory }) {
+function Category({ setCategory, category }) {
   function handleCategory(e) {
-    console.log(e.target.id);
     setCategory(e.target.id);
   }
 
@@ -12,32 +11,37 @@ function Category({ setCategory }) {
       <RadioInput
         text={"Todos"}
         name={"category"}
-        id={"todos"}
+        id={"Todos"}
         handleClick={handleCategory}
+        selected={category}
       />
       <RadioInput
         text={"Tênis"}
         name={"category"}
-        id={"Tenis"}
+        id={"Tênis"}
         handleClick={handleCategory}
+        selected={category}
       />
       <RadioInput
         text={"Sapatilhas"}
         name={"category"}
-        id={"sapatilhas"}
+        id={"Sapatilhas"}
         handleClick={handleCategory}
+        selected={category}
       />
       <RadioInput
-        text={"Sandalhas"}
+        text={"Sandálias"}
         name={"category"}
-        id={"sandalhas"}
+        id={"Sandálias"}
         handleClick={handleCategory}
+        selected={category}
       />
       <RadioInput
         text={"Salto"}
         name={"category"}
-        id={"salto"}
+        id={"Salto"}
         handleClick={handleCategory}
+        selected={category}
       />
     </div>
   );

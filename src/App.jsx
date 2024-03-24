@@ -10,6 +10,9 @@ function App() {
   const [category, setCategory] = useState("Todos");
   const [price, setPrice] = useState("Todos");
   const [products, setProducts] = useState([]);
+  const [search, setSearch] = useState("");
+
+  const [searchedProducts, setSearchProducts] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -46,6 +49,14 @@ function App() {
     fetchData();
   }, [category, price]);
 
+  useEffect(() => {
+    let query = products.filter((product) => {
+      return product.title.toLowerCase().includes(search);
+    });
+
+    setSearchProducts(query);
+  }, [search]);
+
   return (
     <>
       <div className="flex">
@@ -56,10 +67,12 @@ function App() {
           category={category}
         />
         <div className="w-full h-screen ">
-          <Nav />
+          <Nav setSearch={setSearch} search={search} />
           <div>
             <Recommended />
-            <Products data={products} />
+            <Products
+              data={searchedProducts.length > 0 ? searchedProducts : products}
+            />
           </div>
         </div>
       </div>

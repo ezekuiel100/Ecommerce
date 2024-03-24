@@ -3,7 +3,6 @@ import RadioInput from "../RadioInput";
 function Price({ setPrice, price }) {
   function handlePrice(e) {
     setPrice(e.target.id);
-    console.log(e.target.id);
   }
   return (
     <div>

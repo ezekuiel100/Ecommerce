@@ -21,7 +21,7 @@ function App() {
       let filteredData = [...data];
 
       if (category !== "Todos") {
-        let filtered = filteredData.filter(
+        const filtered = filteredData.filter(
           (product) => product.category === category
         );
         filteredData = [...filtered];
@@ -31,18 +31,22 @@ function App() {
       }
 
       if (price === "$0-50") {
-        let filtered = filteredData.filter((product) => product.newPrice <= 50);
+        const filtered = filteredData.filter(
+          (product) => product.newPrice <= 50
+        );
         setProducts(filtered);
       }
       if (price === "$100-150") {
-        let filtered = filteredData.filter(
+        const filtered = filteredData.filter(
           (product) => product.newPrice >= 100 && product.newPrice <= 150
         );
 
         setProducts(filtered);
       }
       if (price === "Mais de $150") {
-        let filtered = filteredData.filter((product) => product.newPrice > 150);
+        const filtered = filteredData.filter(
+          (product) => product.newPrice > 150
+        );
         setProducts(filtered);
       }
     }
@@ -50,10 +54,9 @@ function App() {
   }, [category, price]);
 
   useEffect(() => {
-    let query = products.filter((product) => {
+    const query = products.filter((product) => {
       return product.title.toLowerCase().includes(search);
     });
-
     setSearchProducts(query);
   }, [search]);
 

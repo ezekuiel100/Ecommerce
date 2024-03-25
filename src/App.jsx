@@ -9,56 +9,44 @@ import data from "./db/data";
 function App() {
   const [category, setCategory] = useState("Todos");
   const [price, setPrice] = useState("Todos");
-  const [products, setProducts] = useState([]);
+
   const [search, setSearch] = useState("");
 
-  const [searchedProducts, setSearchProducts] = useState([]);
+  // function handleSearch(e) {
+  //   setSearch(e.target.value.toLowerCase());
+  // }
 
-  useEffect(() => {
-    async function fetchData() {
-      await new Promise((resolve) => setTimeout(resolve, 50));
+  // function handleCategory(selectedCategory) {
+  //   setCategory(selectedCategory);
+  // }
 
-      let filteredData = [...data];
+  // function handlePrice(selectedPrice) {
+  //   setPrice(selectedPrice);
+  // }
 
-      if (category !== "Todos") {
-        const filtered = filteredData.filter(
-          (product) => product.category === category
-        );
-        filteredData = [...filtered];
-        setProducts(filtered);
-      } else {
-        setProducts(filteredData);
-      }
+  function filteredProducts() {
+    let filtered;
 
-      if (price === "$0-50") {
-        const filtered = filteredData.filter(
-          (product) => product.newPrice <= 50
-        );
-        setProducts(filtered);
-      }
-      if (price === "$100-150") {
-        const filtered = filteredData.filter(
-          (product) => product.newPrice >= 100 && product.newPrice <= 150
-        );
-
-        setProducts(filtered);
-      }
-      if (price === "Mais de $150") {
-        const filtered = filteredData.filter(
-          (product) => product.newPrice > 150
-        );
-        setProducts(filtered);
-      }
+    if (category === "Todos") {
+      filtered = data;
+    } else {
+      filtered = data.filter((product) => product.category === category);
     }
-    fetchData();
-  }, [category, price]);
 
-  useEffect(() => {
-    const query = products.filter((product) => {
-      return product.title.toLowerCase().includes(search);
-    });
-    setSearchProducts(query);
-  }, [search]);
+    if (price == 50) {
+      filtered = filtered.filter((product) => product.newPrice <= 50);
+    }
+    if (price == 100) {
+      filtered = filtered.filter(
+        (product) => product.newPrice >= 100 && product.newPrice <= 150
+      );
+    }
+    if (price == 150) {
+      filtered = filtered.filter((product) => product.newPrice >= 150);
+    }
+
+    return filtered;
+  }
 
   return (
     <>
@@ -73,9 +61,7 @@ function App() {
           <Nav setSearch={setSearch} search={search} />
           <div>
             <Recommended />
-            <Products
-              data={searchedProducts.length > 0 ? searchedProducts : products}
-            />
+            <Products data={filteredProducts()} />
           </div>
         </div>
       </div>

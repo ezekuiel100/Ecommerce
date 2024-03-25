@@ -6,7 +6,7 @@ function RadioInput({ text, name, id, handleClick, selected }) {
         name={name}
         id={id}
         onChange={handleClick}
-        checked={selected === text}
+        checked={selected === id}
       ></input>
       <span>{text}</span>
     </label>

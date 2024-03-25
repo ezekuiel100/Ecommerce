@@ -18,7 +18,7 @@ function Price({ setPrice, price }) {
       <RadioInput
         text={"$0-50"}
         name={"price"}
-        id={"$0-50"}
+        id={"50"}
         setPrice={setPrice}
         handleClick={handlePrice}
         selected={price}
@@ -26,7 +26,7 @@ function Price({ setPrice, price }) {
       <RadioInput
         text={"$100-150"}
         name={"price"}
-        id={"$100-150"}
+        id={"100"}
         setPrice={setPrice}
         handleClick={handlePrice}
         selected={price}
@@ -34,7 +34,7 @@ function Price({ setPrice, price }) {
       <RadioInput
         text={"Mais de $150"}
         name={"price"}
-        id={"Mais de $150"}
+        id={"150"}
         setPrice={setPrice}
         handleClick={handlePrice}
         selected={price}

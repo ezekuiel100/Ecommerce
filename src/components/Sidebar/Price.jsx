@@ -1,8 +1,10 @@
 import RadioInput from "../RadioInput";
 
-function Price({ setPrice, price }) {
+function Price({ setPrice, price, setCompany, setSearch }) {
   function handlePrice(e) {
     setPrice(e.target.id);
+    setCompany("Todos");
+    setSearch("");
   }
   return (
     <div>

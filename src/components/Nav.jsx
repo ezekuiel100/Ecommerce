@@ -1,7 +1,14 @@
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
 
-function Nav({ setSearch, search }) {
+function Nav({ setSearch, search, setCompany, setCategory, setPrice }) {
+  function handleChange(e) {
+    setSearch(e.target.value);
+    setCompany("Todos");
+    setCategory("Todos");
+    setPrice("Todos");
+  }
+
   return (
     <nav className="flex justify-around items-center p-5 border-b-2 border-gray-200">
       <input
@@ -9,7 +16,7 @@ function Nav({ setSearch, search }) {
         placeholder="Escolha um tenis"
         className="bg-gray-200 py-2 px-5 outline-none rounded-md w-56"
         value={search}
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={(e) => handleChange(e)}
       ></input>
       <div className="flex gap-8">
         <a href="#">

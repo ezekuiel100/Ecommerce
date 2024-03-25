@@ -1,22 +1,22 @@
-function Recommended() {
+import Button from "./Button";
+
+function Recommended({ company, setCompany, setCategory, setPrice }) {
+  let active = company;
+
+  function handleClick(e) {
+    setCategory("Todos");
+    setPrice("Todos");
+    setCompany(e.target.textContent);
+  }
+
   return (
     <div className="mb-12 px-8">
       <h3 className="font-bold text-2xl my-4">Recomendado</h3>
-      <button className="py-2 px-6 border border-gray-2 mr-2 rounded-md">
-        Todos
-      </button>
-      <button className="py-2 px-6 border border-gray-2 mr-2 rounded-md">
-        Nike
-      </button>
-      <button className="py-2 px-6 border border-gray-2 mr-2 rounded-md">
-        Adidas
-      </button>
-      <button className="py-2 px-6 border border-gray-2 mr-2 rounded-md">
-        Puma
-      </button>
-      <button className="py-2 px-6 border border-gray-2 mr-2 rounded-md">
-        Vans
-      </button>
+      <Button text={"Todos"} handleClick={handleClick} active={active} />
+      <Button text={"Nike"} handleClick={handleClick} active={active} />
+      <Button text={"Adidas"} handleClick={handleClick} active={active} />
+      <Button text={"Puma"} handleClick={handleClick} active={active} />
+      <Button text={"Vans"} handleClick={handleClick} active={active} />
     </div>
   );
 }

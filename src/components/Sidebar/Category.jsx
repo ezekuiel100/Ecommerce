@@ -1,8 +1,10 @@
 import RadioInput from "../RadioInput";
 
-function Category({ setCategory, category }) {
+function Category({ setCategory, category, setCompany, setSearch }) {
   function handleCategory(e) {
     setCategory(e.target.id);
+    setCompany("Todos");
+    setSearch("");
   }
 
   return (

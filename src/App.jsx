@@ -17,16 +17,22 @@ function App() {
   if (category !== "Todos") {
     filtered = data.filter((product) => product.category === category);
   }
-
-  if (price == 50) {
-    filtered = filtered.filter((product) => product.newPrice <= 50);
-  } else if (price == 100) {
-    filtered = filtered.filter(
-      (product) => product.newPrice >= 100 && product.newPrice <= 150
-    );
-  } else if (price == 150) {
-    filtered = filtered.filter((product) => product.newPrice >= 150);
+  if (category !== "Todos") {
+    filtered = data.filter((product) => product.category === category);
   }
+
+  filtered = filtered.filter((product) => {
+    if (price == "Todos") {
+      return true;
+    }
+    if (price === "50") {
+      return product.newPrice <= 50;
+    } else if (price === "100") {
+      return product.newPrice >= 100 && product.newPrice <= 150;
+    } else if (price === "150") {
+      return product.newPrice >= 150;
+    }
+  });
 
   if (search) {
     filtered = data.filter((data) => data.title.toLowerCase().includes(search));
@@ -61,6 +67,7 @@ function App() {
               setCompany={setCompany}
               setCategory={setCategory}
               setPrice={setPrice}
+              setSearch={setSearch}
             />
             <Products data={filtered} />
           </div>

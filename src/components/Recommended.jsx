@@ -1,11 +1,18 @@
 import Button from "./Button";
 
-function Recommended({ company, setCompany, setCategory, setPrice }) {
+function Recommended({
+  company,
+  setCompany,
+  setCategory,
+  setPrice,
+  setSearch,
+}) {
   let active = company;
 
   function handleClick(e) {
     setCategory("Todos");
     setPrice("Todos");
+    setSearch("");
     setCompany(e.target.textContent);
   }
 

@@ -3,8 +3,8 @@ import { IoBagSharp } from "react-icons/io5";
 
 function Card({ img, title, price, reviews }) {
   return (
-    <div className="p-4 border border-2-gray inline-block m-4">
-      <img src={img} className="w-64 h-56 mb-4"></img>
+    <div className="p-4 border border-2-gray inline-block m-4 ">
+      <img src={img} className="w-64 h-56 mb-4 object-contain"></img>
       <h3 className="font-bold text-xl mb-4">{title}</h3>
       <div className="flex gap-1 items-center mb-4">
         <AiFillStar className="text-yellow-500 text-xl" />

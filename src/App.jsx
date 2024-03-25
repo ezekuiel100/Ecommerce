@@ -12,18 +12,6 @@ function App() {
 
   const [search, setSearch] = useState("");
 
-  // function handleSearch(e) {
-  //   setSearch(e.target.value.toLowerCase());
-  // }
-
-  // function handleCategory(selectedCategory) {
-  //   setCategory(selectedCategory);
-  // }
-
-  // function handlePrice(selectedPrice) {
-  //   setPrice(selectedPrice);
-  // }
-
   function filteredProducts() {
     let filtered;
 
@@ -35,13 +23,11 @@ function App() {
 
     if (price == 50) {
       filtered = filtered.filter((product) => product.newPrice <= 50);
-    }
-    if (price == 100) {
+    } else if (price == 100) {
       filtered = filtered.filter(
         (product) => product.newPrice >= 100 && product.newPrice <= 150
       );
-    }
-    if (price == 150) {
+    } else if (price == 150) {
       filtered = filtered.filter((product) => product.newPrice >= 150);
     }
 

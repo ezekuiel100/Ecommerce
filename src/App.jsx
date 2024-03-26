@@ -58,7 +58,7 @@ function App() {
           company,
         }}
       >
-        <div className="flex">
+        <div className="flex w-[100rem] mx-auto">
           <Sidebar />
           <div className="w-full h-screen ">
             <Nav />

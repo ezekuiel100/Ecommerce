@@ -15,7 +15,7 @@ function Nav() {
   }
 
   return (
-    <nav className="flex justify-around items-center p-5 border-b-2 border-gray-200">
+    <nav className="flex justify-around items-center p-5 border-b-2 border-gray-200 ">
       <input
         type="text"
         placeholder="Escolha um tenis"

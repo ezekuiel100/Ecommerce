@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 
 import Nav from "./components/Nav";
 import Products from "./components/Products";
 import Recommended from "./components/Recommended";
 import Sidebar from "./components/Sidebar/Sidebar";
 import data from "./db/data";
+
+export const Context = createContext({});
 
 function App() {
   const [category, setCategory] = useState("Todos");
@@ -44,35 +46,29 @@ function App() {
 
   return (
     <>
-      <div className="flex">
-        <Sidebar
-          setCategory={setCategory}
-          setPrice={setPrice}
-          price={price}
-          category={category}
-          setCompany={setCompany}
-          setSearch={setSearch}
-        />
-        <div className="w-full h-screen ">
-          <Nav
-            setSearch={setSearch}
-            search={search}
-            setCompany={setCompany}
-            setCategory={setCategory}
-            setPrice={setPrice}
-          />
-          <div>
-            <Recommended
-              company={company}
-              setCompany={setCompany}
-              setCategory={setCategory}
-              setPrice={setPrice}
-              setSearch={setSearch}
-            />
-            <Products data={filtered} />
+      <Context.Provider
+        value={{
+          price,
+          category,
+          setPrice,
+          setCategory,
+          search,
+          setSearch,
+          setCompany,
+          company,
+        }}
+      >
+        <div className="flex">
+          <Sidebar />
+          <div className="w-full h-screen ">
+            <Nav />
+            <div>
+              <Recommended />
+              <Products data={filtered} />
+            </div>
           </div>
         </div>
-      </div>
+      </Context.Provider>
     </>
   );
 }

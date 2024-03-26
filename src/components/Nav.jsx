@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
+import { Context } from "../App";
 
-function Nav({ setSearch, search, setCompany, setCategory, setPrice }) {
+function Nav() {
+  const { setSearch, search, setCategory, setCompany, setPrice } =
+    useContext(Context);
+
   function handleChange(e) {
     setSearch(e.target.value);
     setCompany("Todos");

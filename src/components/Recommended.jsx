@@ -1,12 +1,11 @@
+import { useContext } from "react";
 import Button from "./Button";
+import { Context } from "../App";
 
-function Recommended({
-  company,
-  setCompany,
-  setCategory,
-  setPrice,
-  setSearch,
-}) {
+function Recommended() {
+  const { company, setCompany, setCategory, setPrice, setSearch } =
+    useContext(Context);
+
   let active = company;
 
   function handleClick(e) {

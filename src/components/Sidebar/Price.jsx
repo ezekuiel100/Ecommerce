@@ -1,11 +1,16 @@
+import { useContext } from "react";
 import RadioInput from "../RadioInput";
+import { Context } from "../../App";
 
-function Price({ setPrice, price, setCompany, setSearch }) {
+function Price() {
+  const { setPrice, price, setCompany, setSearch } = useContext(Context);
+
   function handlePrice(e) {
     setPrice(e.target.id);
     setCompany("Todos");
     setSearch("");
   }
+
   return (
     <div>
       <h2 className="text-xl">Preço</h2>

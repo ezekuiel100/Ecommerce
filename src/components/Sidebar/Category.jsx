@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import RadioInput from "../RadioInput";
+import { Context } from "../../App";
 
-function Category({ setCategory, category, setCompany, setSearch }) {
+function Category() {
+  const { setCategory, category, setCompany, setSearch } = useContext(Context);
+
   function handleCategory(e) {
     setCategory(e.target.id);
     setCompany("Todos");

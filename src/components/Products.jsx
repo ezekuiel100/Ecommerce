@@ -12,6 +12,7 @@ function Products({ data }) {
               title={data.title}
               price={data.newPrice}
               reviews={data.reviews}
+              star={data.star}
             />
           );
         })
